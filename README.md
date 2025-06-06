@@ -136,7 +136,7 @@ Read more about it in [multiformats/unsigned-varint](https://github.com/multifor
 
 ### Encoding (Bytes -> String)
 
-1. Read the first byte and find the corresponding protocol.
+1. Varint-decode the first byte(s) and find the corresponding protocol.
 2. Read bytes that follow according to the rules defined by that protocol. This is the value for that protocol.
    1. Generally this will be a fixed number of bytes, or
    2. a varint length prefixed number of bytes.
